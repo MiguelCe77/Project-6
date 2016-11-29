@@ -26,10 +26,10 @@ document.addEventListener("keydown", function(e) {
 
   }
 
-    foodY = Number(document.getElementById("food1").getAtrribute("y"))
-    foodX = Number(document.getElementById("food1").getAtrribute("x"))
+    foodY = Number(document.getElementById("food1").getAttribute("y"))
+    foodX = Number(document.getElementById("food1").getAttribute("x"))
 
-    if (playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + hieght) {
+    if (playerX > foodX && playerX < foodX + 100 && playerY > foodY && playerY < foodY + 100) {
         console.log("hello")
     }
 
