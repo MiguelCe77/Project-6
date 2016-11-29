@@ -5,28 +5,24 @@
       <link rel="stylesheet" href="Project-6.css">
   </head>
   <body>
-    <svg id="canvas" width="80%" viewBox="0 0 1000 600" style="background: grey;">
-        <image id="bat" x="250" y="100" width="80" height="80" xlink:href="http://vignette3.wikia.nocookie.net/backyardmonsters/images/a/a1/Pacman-moving.gif/revision/latest?cb=20120607091206"/>
+    <svg id="canvas" width="100%" viewBox="0 0 1000 475" style="background: grey;">
+        <image id="bat" x="250" y="100" width="80" height="80" xlink:href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Pacman.svg/2000px-Pacman.svg.png"/>
 
 
         <!--Food-->
 
-    <circle cx="100" cy="100" r="10" fill="yellow">
+    <circle id="food1" cx="100" cy="100" r="10" fill="yellow">
       <animate id="right" attributeName="cx" from="100" to="300" dur="5s"  begin="0s;left.end"/>
       <animate id="left" attributeName="cx" from="300" to="100" dur="5s" begin="right.end"/>
     </circle>
 
-
-    <circle cx="300" cy="500" r="10" fill="yellow">
+    <circle id="food2" cx="300" cy="400" r="10" fill="yellow">
       <animate id="right2" attributeName="cx" from="300" to="500" dur="5s"  begin="0s;left2.end"/>
       <animate id="left2" attributeName="cx" from="500" to="300" dur="5s" begin="right2.end"/>
     </circle>
 
 
-
-
-
-  </svg>
+    </svg>
   <script src="Project-6.js"></script>
   </body>
 </html>
