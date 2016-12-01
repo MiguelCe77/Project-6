@@ -50,7 +50,7 @@ document.addEventListener("keydown", function(e) {
   var random = randomNumber(10,450);
 
   if (playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + height) {
-      food1.setAttribute("x", random)
+      food1.setAttribute("y", random)
       console.log(random)
       foodScore = foodScore + 1
       document.getElementById("Score").innerHTML = foodScore
