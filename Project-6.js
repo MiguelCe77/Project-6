@@ -11,6 +11,7 @@ var foodX
 var foodY
 var x = 250
 var y = 100
+var foodScore = 0
 
 document.addEventListener("keydown", function(e) {
 
@@ -50,7 +51,9 @@ document.addEventListener("keydown", function(e) {
 
   if (playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + height) {
       food1.setAttribute("x", random)
-      console.log("hello")
+      console.log(random)
+      foodScore = foodScore + 1
+      document.getElementById("Score").innerHTML = foodScore
 }
 
 })
