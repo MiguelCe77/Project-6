@@ -1,5 +1,10 @@
-var width = 60
-var height = 60
+function randomNumber(min,max)
+{
+ return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+var width = 40
+var height = 40
 var playerX
 var playerY
 var foodX
@@ -39,10 +44,13 @@ document.addEventListener("keydown", function(e) {
   playerY = Number(player1.getAttribute("y")) + 25
 
   foodX = Number(food1.getAttribute("x"))
-  foodY = Number(food1.getAttribute("y")
+  foodY = Number(food1.getAttribute("y"))
 
-    if (playerX > foodX && playerX < foodX + 100 && playerY > foodY && playerY < foodY + 100) {
-        console.log("hello")
-    }
+  var random = randomNumber(10,450);
+
+  if (playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + height) {
+      food1.setAttribute("x", random)
+      console.log("hello")
+}
 
 })
