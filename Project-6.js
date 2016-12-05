@@ -12,6 +12,7 @@ var foodY
 var x = 250
 var y = 100
 var foodScore = 0
+var timeStart = Date.now()
 
 document.addEventListener("keydown", function(e) {
 
@@ -55,5 +56,16 @@ document.addEventListener("keydown", function(e) {
       foodScore = foodScore + 1
       document.getElementById("Score").innerHTML = foodScore
 }
+
+
+    foodX2 = Number(food2.getAttribute("x"))
+    foodY2 = Number(food2.getAttribute("y"))
+
+  if (playerX > foodX2 && playerX < foodX2 + width && playerY2 > foodY2 && playerY < foodY2 + height) {
+      food2.setAttribute("y", random)
+      console.log(random)
+      foodScore = foodScore + 1
+      document.getElementById("Score").innerHTML = foodScore
+  }
 
 })
