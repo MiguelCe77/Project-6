@@ -52,7 +52,6 @@ document.addEventListener("keydown", function(e) {
 
   if (playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + height) {
       food1.setAttribute("y", random)
-      console.log(random)
       foodScore = foodScore + 1
       document.getElementById("Score").innerHTML = foodScore
 }
@@ -61,11 +60,15 @@ document.addEventListener("keydown", function(e) {
     foodX2 = Number(food2.getAttribute("x"))
     foodY2 = Number(food2.getAttribute("y"))
 
-  if (playerX > foodX2 && playerX < foodX2 + width && playerY2 > foodY2 && playerY < foodY2 + height) {
+  if (playerX > foodX2 && playerX < foodX2 + width && playerY > foodY2 && playerY < foodY2 + height) {
       food2.setAttribute("y", random)
-      console.log(random)
       foodScore = foodScore + 1
       document.getElementById("Score").innerHTML = foodScore
   }
 
+  if (foodScore == 2)  {
+    document.getElementById("Gameover").setAttribute("opacity", 1)
+    food2.setAttribute("y", 1000)
+    food1.setAttribute("y", 1000)
+  }
 })
